@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <title>Anish's School</title>
+
+    <script src="https://kit.fontawesome.com/cfe10d992d.js" crossorigin="anonymous"></script>
+
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            background-image: url("aaaaaaa.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            color: #333;
+            
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: -1;
+        }
+
+        
+        .marquee {
+            width: 80%;
+            max-width: 1000px;
+            overflow: hidden;
+            background: black;
+            color: white;
+            padding: 4px 0;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 6px;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Step 8: Text inside the marquee scrolls left to right */
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Step 9: Navigation bar (sticky) */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 10px 20px;
+            gap: 15px;
+            position: sticky;
+            top: 30px;
+            z-index: 999;
+        }
+
+        /* Step 10: Logo in the navbar */
+        nav img {
+            border-radius: 50%;
+            margin-right: auto;
+            height: 125px;
+            width: 140px;
+            object-fit: cover;
+            box-shadow: 0 0 10px #000;
+        }
+
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a div {
+            background-color: lightslategray;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            font-weight: bold;
+            font-size: 18px;
+            white-space: nowrap;
+        }
+
+        nav a div:hover {
+            background-color: #f44336;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        
+        h1 {
+            color: #000080;
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 30px;
+            animation: fadeInDown 1.5s ease forwards;
+        }
+
+        h2 {
+            background-color: white;
+            color: black;
+            font-size: 26px;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+            width: max-content;
+            margin: 20px auto;
+            font-weight: 600;
+            font-family: "Arial Black", Arial, sans-serif;
+            animation: fadeInUp 1.5s ease forwards;
+        }
+
+        
+        button {
+            background-color: lightseagreen;
+            padding: 12px 30px;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 128, 128, 0.5);
+        }
+
+        button:hover {
+            background-color: #00796b;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 128, 128, 0.8);
+        }
+
+        /* Step 14: Social media icon styling */
+        .social-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-container a {
+            color: white;
+            font-size: 50px;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-container a:hover {
+            color: #3b5998;
+            transform: scale(1.2);
+        }
+
+        
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Step 16: Footer Styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(30, 30, 30, 0.9);
+            color: #ddd;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 400;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Step 17: Scrolling marquee at top -->
+    <div class="marquee">
+        <span>This website is developed by Anish Sapkota (Class 12)</span>
+    </div>
+
+    <!-- Step 18: Navigation bar -->
+    <nav>
+        <img src="logo.jpg" alt="School Logo" />
+        <a href="about.html"><div>About</div></a>
+        <a href="galerally.html"><div>Gallery</div></a>
+        <a href="location.html"><div>Location</div></a>
+        <a href="https://biramarsingh.edu.np/assets/files/curriculum.pdf" target="_blank" rel="noopener"><div>Syllabus</div></a>
+        <a href="form.html"><div>Registration Form</div></a>
+        <a href="concact.html"><div>Contact</div></a>
+    </nav>
+
+    <!-- Step 19: Main headings -->
+    <h1>SHREE BIRAMAR SINGH SECONDARY SCHOOL<br>Birtamode-2, Jhapa</h1>
+    <h2>"हाम्रो इच्छा सबैलाई प्राविधिक शिक्षा "</h2>
+
+    <!-- Step 20: Registration button -->
+    <center>
+        <a href="form.html">
+            <button>REGISTER HERE</button>
+        </a>
+    </center>
+
+    
+    <div class="social-container">
+        <a href="https://www.facebook.com/BirAmarsinghtechnicalsecondaryschooltirtharajkatte" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+
+    
+    <footer>
+        &copy; 2025 Shree Biramar Singh Secondary School | Contact: info@biramarsingh.edu.np | Phone: 97700925081
+    </footer>
+
+</body>
+</html>
